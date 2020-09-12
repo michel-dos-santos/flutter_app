@@ -10,15 +10,41 @@ class HomePage extends StatefulWidget {
   _HomePageState createState() => _HomePageState();
 }
 
-class _HomePageState extends State<HomePage> {
+class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
   bool _isShowMenu;
-  int _currentIndex;
+  AnimationController _controllerAnimation;
+  PageController _controllerPageView;
 
   @override
   void initState() {
     super.initState();
     _isShowMenu = false;
-    _currentIndex = 0;
+    _controllerAnimation = AnimationController(
+      duration: const Duration(milliseconds: 100),
+      vsync: this,
+    );
+    _controllerPageView = PageController();
+  }
+
+  @override
+  void dispose() {
+    _controllerAnimation.dispose();
+    super.dispose();
+  }
+
+  void onTapShowMenu() {
+    setState(() {
+      _isShowMenu = !_isShowMenu;
+    });
+    _playAnimation();
+  }
+
+  void _playAnimation() {
+    if (_isShowMenu) {
+      _controllerAnimation.forward();
+    } else {
+      _controllerAnimation.reverse();
+    }
   }
 
   @override
@@ -33,9 +59,7 @@ class _HomePageState extends State<HomePage> {
           MyAppBar(
             isShowMenu: _isShowMenu,
             onTap: () {
-              setState(() {
-                _isShowMenu = !_isShowMenu;
-              });
+              onTapShowMenu();
             },
           ),
           SettingsApp(
@@ -45,16 +69,13 @@ class _HomePageState extends State<HomePage> {
           PageViewApp(
             isShowMenu: _isShowMenu,
             top: screenHeigth * .22,
-            onChanged: (index) {
-              setState(() {
-                _currentIndex = index;
-              });     
-            },
+            controllerAnimation: _controllerAnimation.view,
+            controller: _controllerPageView,
           ),
           MyDotsApp(
             isShowMenu: _isShowMenu,
             top: screenHeigth * .68,
-            currentIndex: _currentIndex,
+            controller: _controllerPageView,
           ),
         ],
       ),

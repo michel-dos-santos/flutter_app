@@ -1,154 +1,29 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app/pages/widgets/smooth_page_indicator/effects/worm_effect.dart';
+import 'package:flutter_app/pages/widgets/smooth_page_indicator/smooth_page_indicator.dart';
 
 class MyDotsApp extends StatelessWidget {
   final bool isShowMenu;
   final double top;
-  final int currentIndex;
+  final PageController controller;
 
-  Color getColor(int index) {
-    return currentIndex == index ? Colors.white : Colors.white38;
-  }
-
-  const MyDotsApp({Key key, this.isShowMenu, this.top, this.currentIndex})
+  MyDotsApp({Key key, this.isShowMenu, this.top, this.controller})
       : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Positioned(
       top: top,
-      child: AnimatedOpacity(
-        duration: Duration(milliseconds: 300),
-        opacity: isShowMenu ? 0 : 1,
-        child: Row(
-          children: [
-            AnimatedContainer(
-              duration: Duration(microseconds: 10),
-              height: 7,
-              width: 7,
-              decoration:
-                  BoxDecoration(color: getColor(0), shape: BoxShape.circle),
-            ),
-            SizedBox(
-              width: 8,
-            ),
-            AnimatedContainer(
-              duration: Duration(microseconds: 10),
-              height: 7,
-              width: 7,
-              decoration:
-                  BoxDecoration(color: getColor(1), shape: BoxShape.circle),
-            ),
-            SizedBox(
-              width: 8,
-            ),
-            AnimatedContainer(
-              duration: Duration(microseconds: 10),
-              height: 7,
-              width: 7,
-              decoration:
-                  BoxDecoration(color: getColor(2), shape: BoxShape.circle),
-            ),
-            SizedBox(
-              width: 8,
-            ),
-            AnimatedContainer(
-              duration: Duration(microseconds: 10),
-              height: 7,
-              width: 7,
-              decoration:
-                  BoxDecoration(color: getColor(3), shape: BoxShape.circle),
-            ),
-            SizedBox(
-              width: 8,
-            ),
-            AnimatedContainer(
-              duration: Duration(microseconds: 10),
-              height: 7,
-              width: 7,
-              decoration:
-                  BoxDecoration(color: getColor(4), shape: BoxShape.circle),
-            ),
-            SizedBox(
-              width: 8,
-            ),
-            AnimatedContainer(
-              duration: Duration(microseconds: 10),
-              height: 7,
-              width: 7,
-              decoration:
-                  BoxDecoration(color: getColor(5), shape: BoxShape.circle),
-            ),
-            SizedBox(
-              width: 8,
-            ),
-            AnimatedContainer(
-              duration: Duration(microseconds: 10),
-              height: 7,
-              width: 7,
-              decoration:
-                  BoxDecoration(color: getColor(6), shape: BoxShape.circle),
-            ),
-            SizedBox(
-              width: 8,
-            ),
-            AnimatedContainer(
-              duration: Duration(microseconds: 10),
-              height: 7,
-              width: 7,
-              decoration:
-                  BoxDecoration(color: getColor(7), shape: BoxShape.circle),
-            ),
-            SizedBox(
-              width: 8,
-            ),
-            AnimatedContainer(
-              duration: Duration(microseconds: 10),
-              height: 7,
-              width: 7,
-              decoration:
-                  BoxDecoration(color: getColor(8), shape: BoxShape.circle),
-            ),
-            SizedBox(
-              width: 8,
-            ),
-            AnimatedContainer(
-              duration: Duration(microseconds: 10),
-              height: 7,
-              width: 7,
-              decoration:
-                  BoxDecoration(color: getColor(9), shape: BoxShape.circle),
-            ),
-            SizedBox(
-              width: 8,
-            ),
-            AnimatedContainer(
-              duration: Duration(microseconds: 10),
-              height: 7,
-              width: 7,
-              decoration:
-                  BoxDecoration(color: getColor(10), shape: BoxShape.circle),
-            ),
-            SizedBox(
-              width: 8,
-            ),
-            AnimatedContainer(
-              duration: Duration(microseconds: 10),
-              height: 7,
-              width: 7,
-              decoration:
-                  BoxDecoration(color: getColor(11), shape: BoxShape.circle),
-            ),
-            SizedBox(
-              width: 8,
-            ),
-            AnimatedContainer(
-              duration: Duration(microseconds: 10),
-              height: 7,
-              width: 7,
-              decoration:
-                  BoxDecoration(color: getColor(12), shape: BoxShape.circle),
-            ),
-          ],
+      child: Container(
+        child: SmoothPageIndicator(
+          controller: controller,
+          count: 13,
+          effect: WormEffect(
+            dotWidth: 8,
+            dotHeight: 8,
+            dotColor: Colors.white54,
+            activeDotColor: Colors.white,
+          ),
         ),
       ),
     );

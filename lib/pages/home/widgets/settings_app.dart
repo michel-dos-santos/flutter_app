@@ -14,7 +14,7 @@ class SettingsApp extends StatelessWidget {
       left: 0,
       right: 0,
       child: AnimatedOpacity(
-        duration: Duration(milliseconds: 120),
+        duration: Duration(milliseconds: 200),
         opacity: !isShowMenu ? 0 : 1,
         child: Container(
           color: Theme.of(context).primaryColor,
@@ -29,10 +29,6 @@ class SettingsApp extends StatelessWidget {
                 ItemSetting(
                   icon: Icons.send,
                   text: 'Enviar mensagem ao DEV',
-                ),
-                ItemSetting(
-                  icon: Icons.info_outline,
-                  text: 'Me ajuda',
                 ),
                 ItemSetting(
                   icon: Icons.person_outline,
