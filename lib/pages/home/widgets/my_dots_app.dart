@@ -14,7 +14,9 @@ class MyDotsApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return Positioned(
       top: top,
-      child: Container(
+      child: AnimatedOpacity(
+        duration: Duration(milliseconds: 100),
+        opacity: isShowMenu ? 0 : 1,
         child: SmoothPageIndicator(
           controller: controller,
           count: 13,
