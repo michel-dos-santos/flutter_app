@@ -1,6 +1,7 @@
 # flutter_app
 
-A new Flutter project.
+Projeto inicial para colocar em pratica e aprender mais sofre o Flutter.
+A ideia é trazer facilidade na informação interno do nosso condomínio.
 
 ## Getting Started
 
