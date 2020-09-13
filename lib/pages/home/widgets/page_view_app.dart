@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app/pages/home/widgets/financial_card.dart';
+import 'package:flutter_app/pages/home/widgets/maintenance_card.dart';
 import 'card_app.dart';
 
 class PageViewApp extends StatelessWidget {
@@ -28,7 +30,7 @@ class PageViewApp extends StatelessWidget {
         ),
         translateY = Tween<double>(
           begin: top,
-          end: top / -20,
+          end: top / 6,
         ).animate(
           CurvedAnimation(
             parent: controllerAnimation,
@@ -60,19 +62,21 @@ class PageViewApp extends StatelessWidget {
             physics: BouncingScrollPhysics(),
             
             children: [
-              CardApp(text: 'Controle de contas a pagar e a receber'),
-              CardApp(text: 'Manutenções realizadas e previstas'),
-              CardApp(text: 'Lista de moradores'),
-              CardApp(text: 'Estacionamento'),
-              CardApp(text: 'Mural de informação/sugestão/problemas'),
-              CardApp(text: 'Relação de Inadimplentes'),
-              CardApp(text: 'Chat direto com síndico e entre apartamentos'),
-              CardApp(text: 'Direitos e Deveres'),
-              CardApp(text: 'Reuniões (Atas)'),
-              CardApp(text: 'Controle de encomendas'),
-              CardApp(text: 'Enquete'),
-              CardApp(text: 'Mural de Serviços'),
-              CardApp(text: 'Telefones Úteis'),
+              CardApp(child: FinancialCard(),),
+              CardApp(child: MaintenanceCard(),),
+              //CardApp(text: 'Controle de contas a pagar e a receber'),
+              //CardApp(text: 'Manutenções realizadas e previstas'),
+              //CardApp(text: 'Lista de moradores'),
+              //CardApp(text: 'Estacionamento'),
+              //CardApp(text: 'Mural de informação/sugestão/problemas'),
+              //CardApp(text: 'Relação de Inadimplentes'),
+              //CardApp(text: 'Chat direto com síndico e entre apartamentos'),
+              //CardApp(text: 'Direitos e Deveres'),
+              //CardApp(text: 'Reuniões (Atas)'),
+              //CardApp(text: 'Controle de encomendas'),
+              //CardApp(text: 'Enquete'),
+              //CardApp(text: 'Mural de Serviços'),
+              //CardApp(text: 'Telefones Úteis'),
             ],
           ),
         ),

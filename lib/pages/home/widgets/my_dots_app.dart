@@ -6,8 +6,9 @@ class MyDotsApp extends StatelessWidget {
   final bool isShowMenu;
   final double top;
   final PageController controller;
+  final int count;
 
-  MyDotsApp({Key key, this.isShowMenu, this.top, this.controller})
+  MyDotsApp({Key key, this.isShowMenu, this.top, this.controller, this.count})
       : super(key: key);
 
   @override
@@ -19,7 +20,7 @@ class MyDotsApp extends StatelessWidget {
         opacity: isShowMenu ? 0 : 1,
         child: SmoothPageIndicator(
           controller: controller,
-          count: 13,
+          count: count,
           effect: WormEffect(
             dotWidth: 8,
             dotHeight: 8,

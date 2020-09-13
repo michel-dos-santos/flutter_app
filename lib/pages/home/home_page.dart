@@ -77,6 +77,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
             isShowMenu: _isShowMenu,
             top: screenHeigth * .86,
             controller: _controllerPageView,
+            count: 2
           ),
           MyBanner(
             top: screenHeigth * .18,

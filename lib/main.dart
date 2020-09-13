@@ -6,7 +6,7 @@ import 'utils/custom_colors.dart';
 void main() {
   SystemChrome.setSystemUIOverlayStyle(
     SystemUiOverlayStyle(
-      systemNavigationBarColor: CustomColors.customRed,
+      systemNavigationBarColor: Colors.black,
       statusBarColor: CustomColors.customRed,
     ),
   );
@@ -18,6 +18,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter App',
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primarySwatch: CustomColors.customRed,
         visualDensity: VisualDensity.adaptivePlatformDensity,
