@@ -47,7 +47,7 @@ class PageViewApp extends StatelessWidget {
 
   Widget _buildAnimation(BuildContext context, Widget child) {
     return Positioned(
-      height: MediaQuery.of(context).size.height * 0.45,
+      height: MediaQuery.of(context).size.height * 0.58,
       top: translateY.value,
       left: 0,
       right: 0,

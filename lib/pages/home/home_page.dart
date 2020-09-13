@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app/pages/home/widgets/my_banner.dart';
 
 import 'widgets/my_app_bar.dart';
 import 'widgets/my_dots_app.dart';
@@ -64,19 +65,22 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
           ),
           SettingsApp(
             isShowMenu: _isShowMenu,
-            top: screenHeigth * .22,
+            top: screenHeigth * .33,
           ),
           PageViewApp(
             isShowMenu: _isShowMenu,
-            top: screenHeigth * .22,
+            top: screenHeigth * .28,
             controllerAnimation: _controllerAnimation.view,
             controller: _controllerPageView,
           ),
           MyDotsApp(
             isShowMenu: _isShowMenu,
-            top: screenHeigth * .68,
+            top: screenHeigth * .86,
             controller: _controllerPageView,
           ),
+          MyBanner(
+            top: screenHeigth * .18,
+          )
         ],
       ),
     );
