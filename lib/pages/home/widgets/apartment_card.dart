@@ -83,7 +83,7 @@ class ApartmentCard extends StatelessWidget {
                                   Text(
                                     'OCUPADOS',
                                     style: TextStyle(
-                                      color: Colors.redblue,
+                                      color: Colors.red,
                                       fontWeight: FontWeight.bold,
                                     ),
                                   ),
