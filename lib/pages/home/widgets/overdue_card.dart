@@ -1,7 +1,7 @@
 import 'dart:ui';
 import 'package:flutter/material.dart';
 
-class ParkingCard extends StatelessWidget {
+class OverdueCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ClipRRect(
@@ -22,12 +22,12 @@ class ParkingCard extends StatelessWidget {
                             padding: const EdgeInsets.only(top: 35, left: 20, bottom: 20, right: 20),
                             child: Row(
                               children: [
-                                Icon(Icons.car_repair),
+                                Icon(Icons.warning),
                                 SizedBox(
                                   width: 5,
                                 ),
                                 Text(
-                                  'Estacionamento',
+                                  'Inadimplentes',
                                   style: TextStyle(
                                     color: Colors.grey[600],
                                   ),
@@ -43,7 +43,7 @@ class ParkingCard extends StatelessWidget {
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
                                   Text(
-                                    'MINHA VAGA',
+                                    'MEU APARTAMENTO',
                                     style: TextStyle(
                                       color: Colors.teal,
                                       fontWeight: FontWeight.bold,
@@ -53,21 +53,13 @@ class ParkingCard extends StatelessWidget {
                                     TextSpan(
                                       children: [
                                         TextSpan(
-                                          text: 'nº ',
-                                          style: TextStyle(
-                                            fontWeight: FontWeight.bold,
-                                          ),
-                                        ),
-                                        TextSpan(
-                                          text: '14',
-                                          style: TextStyle(
-                                            fontWeight: FontWeight.bold,
-                                          ),
+                                          text: 'NÃO',
                                         ),
                                       ],
                                     ),
                                     style: TextStyle(
                                       color: Colors.grey,
+                                      fontWeight: FontWeight.bold,
                                       fontSize: 30,
                                     ),
                                   ),
@@ -83,7 +75,7 @@ class ParkingCard extends StatelessWidget {
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
                                   Text(
-                                    'NÚMERO DE VAGAS',
+                                    'INADIMPLENTES',
                                     style: TextStyle(
                                       color: Colors.red,
                                       fontWeight: FontWeight.bold,
@@ -93,41 +85,28 @@ class ParkingCard extends StatelessWidget {
                                     TextSpan(
                                       children: [
                                         TextSpan(
-                                          text: '50',
+                                          text: '15',
+                                          style: TextStyle(
+                                            fontWeight: FontWeight.bold,
+                                          ),
                                         ),
                                         TextSpan(
-                                          text: ' Livres',
+                                          text: ' de ',
                                           style: TextStyle(
-                                            fontWeight: FontWeight.normal,
-                                            fontSize: 15
+                                            fontSize: 20,
+                                          ),
+                                        ),
+                                        TextSpan(
+                                          text: '164 apartamentos',
+                                          style: TextStyle(
+                                            fontSize: 20,
                                           ),
                                         ),
                                       ],
                                     ),
                                     style: TextStyle(
                                       color: Colors.grey,
-                                      fontWeight: FontWeight.bold,
-                                      fontSize: 30,
-                                    ),
-                                  ),
-                                  Text.rich(
-                                    TextSpan(
-                                      children: [
-                                        TextSpan(
-                                          text: '114',
-                                        ),
-                                        TextSpan(
-                                          text: ' Travadas',
-                                          style: TextStyle(
-                                            fontWeight: FontWeight.normal,
-                                            fontSize: 15
-                                          ),
-                                        ),
-                                      ],
-                                    ),
-                                    style: TextStyle(
-                                      color: Colors.grey,
-                                      fontWeight: FontWeight.bold,
+                                      fontWeight: FontWeight.normal,
                                       fontSize: 30,
                                     ),
                                   ),
@@ -154,7 +133,7 @@ class ParkingCard extends StatelessWidget {
                   children: [
                     Flexible(
                       child: Text(
-                        'Vaga Unitária está sendo alugada pelo apartamento 13 do bloco 21, quem se interessar entrar em contato (11) 91234-5678',
+                        'Este mês houve dois apartamentos que regularizaram.',
                         style: TextStyle(
                           color: Colors.grey[600],
                           fontSize: 15,

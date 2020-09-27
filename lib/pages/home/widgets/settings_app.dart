@@ -18,7 +18,7 @@ class SettingsApp extends StatelessWidget {
         opacity: !isShowMenu ? 0 : 1,
         child: Container(
           color: Theme.of(context).primaryColor,
-          height: MediaQuery.of(context).size.height * 0.49,
+          height: MediaQuery.of(context).size.height * 0.59,
           child: Padding(
             padding: const EdgeInsets.symmetric(horizontal: 20),
             child: Column(
@@ -27,12 +27,24 @@ class SettingsApp extends StatelessWidget {
                   height: 20,
                 ),
                 ItemSetting(
-                  icon: Icons.send,
-                  text: 'Enviar mensagem ao DEV',
-                ),
-                ItemSetting(
                   icon: Icons.person_outline,
                   text: 'Perfil',
+                ),
+                ItemSetting(
+                  icon: Icons.phone,
+                  text: 'Telefones Úteis',
+                ),
+                ItemSetting(
+                  icon: Icons.text_fields,
+                  text: 'Enquete',
+                ),
+                ItemSetting(
+                  icon: Icons.chat,
+                  text: 'Chat com Desenvolvedor',
+                ),
+                ItemSetting(
+                  icon: Icons.chat_bubble,
+                  text: 'Chat com Síndico',
                 ),
                 ItemSetting(
                   icon: Icons.phone_android,

@@ -3,7 +3,13 @@ import 'package:flutter_app/pages/home/widgets/financial_card.dart';
 import 'package:flutter_app/pages/home/widgets/information_board_card.dart';
 import 'package:flutter_app/pages/home/widgets/maintenance_card.dart';
 import 'package:flutter_app/pages/home/widgets/apartment_card.dart';
+import 'package:flutter_app/pages/home/widgets/meetings_card.dart';
+import 'package:flutter_app/pages/home/widgets/overdue_card.dart';
+import 'package:flutter_app/pages/home/widgets/package_card.dart';
 import 'package:flutter_app/pages/home/widgets/parking_card.dart';
+import 'package:flutter_app/pages/home/widgets/rights_and_duties_card.dart';
+import 'package:flutter_app/pages/home/widgets/services_board_card.dart';
+import 'package:flutter_app/pages/widgets/useful_phones_card.dart';
 import 'card_app.dart';
 
 class PageViewApp extends StatelessWidget {
@@ -70,19 +76,11 @@ class PageViewApp extends StatelessWidget {
               CardApp(child: InformationBoardCard(),),
               CardApp(child: ApartmentCard(),),
               CardApp(child: ParkingCard(),),
-              //CardApp(text: 'Controle de contas a pagar e a receber'),
-              //CardApp(text: 'Manutenções realizadas e previstas'),
-              //CardApp(text: 'Lista de moradores'),
-              //CardApp(text: 'Estacionamento'),
-              //CardApp(text: 'Mural de informação/sugestão/problemas'),
-              //CardApp(text: 'Relação de Inadimplentes'),
-              //CardApp(text: 'Chat direto com síndico e entre apartamentos'),
-              //CardApp(text: 'Direitos e Deveres'),
-              //CardApp(text: 'Reuniões (Atas)'),
-              //CardApp(text: 'Controle de encomendas'),
-              //CardApp(text: 'Enquete'),
-              //CardApp(text: 'Mural de Serviços'),
-              //CardApp(text: 'Telefones Úteis'),
+              CardApp(child: OverdueCard(),),
+              CardApp(child: RightsAndDutiesCard(),),
+              CardApp(child: MeetingsCard(),),
+              CardApp(child: PackageCard(),),
+              CardApp(child: ServiceBoardCard(),),
             ],
           ),
         ),
