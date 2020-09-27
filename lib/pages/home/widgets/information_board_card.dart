@@ -2,7 +2,7 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:flutter_app/pages/widgets/unordered_list.dart';
 
-class MaintenanceCard extends StatelessWidget {
+class InformationBoardCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ClipRRect(
@@ -23,12 +23,12 @@ class MaintenanceCard extends StatelessWidget {
                             padding: const EdgeInsets.only(top: 35, left: 20, bottom: 20, right: 20),
                             child: Row(
                               children: [
-                                Icon(Icons.home_repair_service_sharp),
+                                Icon(Icons.bookmarks),
                                 SizedBox(
                                   width: 5,
                                 ),
                                 Text(
-                                  'Manutenções',
+                                  'Mural de Informação',
                                   style: TextStyle(
                                     color: Colors.grey[600],
                                   ),
@@ -44,7 +44,7 @@ class MaintenanceCard extends StatelessWidget {
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
                                   Text(
-                                    'REALIZADAS',
+                                    'ÚLTIMAS INFORMAÇÕES',
                                     style: TextStyle(
                                       color: Colors.teal,
                                       fontWeight: FontWeight.bold,
@@ -52,25 +52,23 @@ class MaintenanceCard extends StatelessWidget {
                                   ),
                                   UnorderedList(
                                     [
-                                      'Criação da Horta Comunitária',
-                                      'Poda das árvores',
-                                      'Limpeza das caixas de esgotos',
-                                      'Troca da caixa dagua no bloco 1'
+                                      'Férias do funcionário Luis a partir do dia MM/AAAA',
+                                      'Nova funcionário contratado para a portaria',
                                     ],
-                                  )
+                                  ),
                                 ],
                               ),
                             ),
                           ),
                           Padding(
-                            padding: const EdgeInsets.only(top: 10, left: 20, bottom: 0, right: 20),
+                            padding: const EdgeInsets.only(top: 35, left: 20, bottom: 0, right: 20),
                             child: SizedBox(
                               width: double.infinity,
                               child: Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
                                   Text(
-                                    'PREVISTAS',
+                                    'ÚLTIMAS SUGESTÕES',
                                     style: TextStyle(
                                       color: Colors.red,
                                       fontWeight: FontWeight.bold,
@@ -78,11 +76,9 @@ class MaintenanceCard extends StatelessWidget {
                                   ),
                                   UnorderedList(
                                     [
-                                      'Criação do projeto do Gás',
-                                      'Pintar os blocos',
-                                      'Troca das lampadas queimadas'
+                                      'Melhorar a visibilidade das informações administrativas aos condomínos',
                                     ],
-                                  )
+                                  ),
                                 ],
                               ),
                             ),
@@ -106,7 +102,7 @@ class MaintenanceCard extends StatelessWidget {
                   children: [
                     Flexible(
                       child: Text(
-                        'Somente colher da horta o que realmente for utilizar',
+                        'Luz do poste em frente ao condôminio está queimada, tomar cuidado ao entrar e sair.',
                         style: TextStyle(
                           color: Colors.grey[600],
                           fontSize: 15,

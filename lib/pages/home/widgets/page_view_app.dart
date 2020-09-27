@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app/pages/home/widgets/financial_card.dart';
+import 'package:flutter_app/pages/home/widgets/information_board_card.dart';
 import 'package:flutter_app/pages/home/widgets/maintenance_card.dart';
+import 'package:flutter_app/pages/home/widgets/apartment_card.dart';
+import 'package:flutter_app/pages/home/widgets/parking_card.dart';
 import 'card_app.dart';
 
 class PageViewApp extends StatelessWidget {
@@ -64,6 +67,9 @@ class PageViewApp extends StatelessWidget {
             children: [
               CardApp(child: FinancialCard(),),
               CardApp(child: MaintenanceCard(),),
+              CardApp(child: InformationBoardCard(),),
+              CardApp(child: ApartmentCard(),),
+              CardApp(child: ParkingCard(),),
               //CardApp(text: 'Controle de contas a pagar e a receber'),
               //CardApp(text: 'Manutenções realizadas e previstas'),
               //CardApp(text: 'Lista de moradores'),

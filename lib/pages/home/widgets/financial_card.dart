@@ -6,7 +6,7 @@ class FinancialCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ClipRRect(
-      borderRadius: BorderRadius.circular(5),
+      borderRadius: BorderRadius.circular(10),
       child: Column(
         children: [
           Expanded(
@@ -15,143 +15,145 @@ class FinancialCard extends StatelessWidget {
               child: Row(
                 children: [
                   Expanded(
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Padding(
-                          padding: const EdgeInsets.all(20),
-                          child: Row(
-                            children: [
-                              Icon(Icons.account_balance_wallet_outlined),
-                              SizedBox(
-                                width: 5,
+                    child: SingleChildScrollView(
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.all(20),
+                            child: Row(
+                              children: [
+                                Icon(Icons.account_balance_wallet),
+                                SizedBox(
+                                  width: 5,
+                                ),
+                                Text(
+                                  'Financeiro',
+                                  style: TextStyle(
+                                    color: Colors.grey[600],
+                                  ),
+                                )
+                              ],
+                            ),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.all(20),
+                            child: SizedBox(
+                              width: double.infinity,
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text(
+                                    'DESPESA',
+                                    style: TextStyle(
+                                      color: Colors.red,
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  ),
+                                  Text.rich(
+                                    TextSpan(
+                                      text: 'R\$ ',
+                                      children: [
+                                        TextSpan(
+                                          text: '600',
+                                          style: TextStyle(
+                                            fontWeight: FontWeight.bold,
+                                          ),
+                                        ),
+                                        TextSpan(
+                                          text: ',',
+                                        ),
+                                        TextSpan(
+                                          text: '00',
+                                        ),
+                                      ],
+                                    ),
+                                    style: TextStyle(
+                                      color: Colors.red,
+                                      fontSize: 30,
+                                    ),
+                                  ),
+                                  Text.rich(
+                                    TextSpan(
+                                      text: 'Informação atualizada em: ',
+                                      children: [
+                                        TextSpan(
+                                          text: '10/12/2020',
+                                          style: TextStyle(
+                                            fontWeight: FontWeight.bold,
+                                            color: Colors.red[400],
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                    style: TextStyle(
+                                      color: Colors.grey[600],
+                                    ),
+                                  ),
+                                ],
                               ),
-                              Text(
-                                'Financeiro',
-                                style: TextStyle(
-                                  color: Colors.grey[600],
-                                ),
-                              )
-                            ],
-                          ),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.all(20),
-                          child: SizedBox(
-                            width: double.infinity,
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Text(
-                                  'DESPESA',
-                                  style: TextStyle(
-                                    color: Colors.red,
-                                    fontWeight: FontWeight.bold,
-                                  ),
-                                ),
-                                Text.rich(
-                                  TextSpan(
-                                    text: 'R\$ ',
-                                    children: [
-                                      TextSpan(
-                                        text: '600',
-                                        style: TextStyle(
-                                          fontWeight: FontWeight.bold,
-                                        ),
-                                      ),
-                                      TextSpan(
-                                        text: ',',
-                                      ),
-                                      TextSpan(
-                                        text: '00',
-                                      ),
-                                    ],
-                                  ),
-                                  style: TextStyle(
-                                    color: Colors.red,
-                                    fontSize: 30,
-                                  ),
-                                ),
-                                Text.rich(
-                                  TextSpan(
-                                    text: 'Informação atualizada em: ',
-                                    children: [
-                                      TextSpan(
-                                        text: '10/12/2020',
-                                        style: TextStyle(
-                                          fontWeight: FontWeight.bold,
-                                          color: Colors.red[400],
-                                        ),
-                                      ),
-                                    ],
-                                  ),
-                                  style: TextStyle(
-                                    color: Colors.grey[600],
-                                  ),
-                                ),
-                              ],
                             ),
                           ),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.all(20),
-                          child: SizedBox(
-                            width: double.infinity,
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Text(
-                                  'RECEITA',
-                                  style: TextStyle(
-                                    color: Colors.teal,
-                                    fontWeight: FontWeight.bold,
+                          Padding(
+                            padding: const EdgeInsets.all(20),
+                            child: SizedBox(
+                              width: double.infinity,
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text(
+                                    'RECEITA',
+                                    style: TextStyle(
+                                      color: Colors.teal,
+                                      fontWeight: FontWeight.bold,
+                                    ),
                                   ),
-                                ),
-                                Text.rich(
-                                  TextSpan(
-                                    text: 'R\$ ',
-                                    children: [
-                                      TextSpan(
-                                        text: '1105',
-                                        style: TextStyle(
-                                          fontWeight: FontWeight.bold,
+                                  Text.rich(
+                                    TextSpan(
+                                      text: 'R\$ ',
+                                      children: [
+                                        TextSpan(
+                                          text: '1105',
+                                          style: TextStyle(
+                                            fontWeight: FontWeight.bold,
+                                          ),
                                         ),
-                                      ),
-                                      TextSpan(
-                                        text: ',',
-                                      ),
-                                      TextSpan(
-                                        text: '00',
-                                      ),
-                                    ],
-                                  ),
-                                  style: TextStyle(
-                                    color: Colors.teal,
-                                    fontSize: 30,
-                                  ),
-                                ),
-                                Text.rich(
-                                  TextSpan(
-                                    text: 'Informação atualizada em: ',
-                                    children: [
-                                      TextSpan(
-                                        text: '10/12/2020',
-                                        style: TextStyle(
-                                          fontWeight: FontWeight.bold,
-                                          color: Colors.teal[400],
+                                        TextSpan(
+                                          text: ',',
                                         ),
-                                      ),
-                                    ],
+                                        TextSpan(
+                                          text: '00',
+                                        ),
+                                      ],
+                                    ),
+                                    style: TextStyle(
+                                      color: Colors.teal,
+                                      fontSize: 30,
+                                    ),
                                   ),
-                                  style: TextStyle(
-                                    color: Colors.grey[600],
+                                  Text.rich(
+                                    TextSpan(
+                                      text: 'Informação atualizada em: ',
+                                      children: [
+                                        TextSpan(
+                                          text: '10/12/2020',
+                                          style: TextStyle(
+                                            fontWeight: FontWeight.bold,
+                                            color: Colors.teal[400],
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                    style: TextStyle(
+                                      color: Colors.grey[600],
+                                    ),
                                   ),
-                                ),
-                              ],
+                                ],
+                              ),
                             ),
                           ),
-                        ),
-                      ],
+                        ],
+                      ),
                     ),
                   ),
                   Container(
@@ -174,7 +176,7 @@ class FinancialCard extends StatelessWidget {
                     width: 10,
                     decoration: BoxDecoration(
                       borderRadius:
-                          BorderRadius.only(topRight: Radius.circular(10)),
+                          BorderRadius.circular(10),
                     ),
                   ),
                 ],
